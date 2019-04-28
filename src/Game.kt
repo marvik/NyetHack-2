@@ -3,6 +3,16 @@ fun main(args: Array<String>) {
     var healthPoints = 89
     var isBlessed = true
 
+    val isImmortal = false
+
+    // Aura
+    val auraVisible = isBlessed && healthPoints > 50 || isImmortal
+    if (auraVisible) {
+        println("GREEN")
+    } else {
+        println("NONE")
+    }
+
     if (healthPoints == 100) {
         println("$name is in excellent condition!")
     } else if (healthPoints >= 90) {
