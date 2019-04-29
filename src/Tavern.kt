@@ -1,5 +1,10 @@
 fun main(args: Array<String>) {
-    var signatureDrink = readLine()?.capitalize()
-
-    println(signatureDrink)
+    val beverage = readLine()?.let {
+        if (it.isNotBlank()) {
+            it.capitalize()
+        } else {
+            "Buttered Ale"
+        }
+    }
+    println(beverage)
 }
