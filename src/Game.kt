@@ -1,6 +1,3 @@
-import kotlin.math.min
-import kotlin.math.max
-
 fun main(args: Array<String>) {
     val healthPoints = 89
     val isBlessed = true
@@ -14,7 +11,7 @@ fun main(args: Array<String>) {
 
     val healthStatus = formatHealthStatus(healthPoints, isBlessed)
 
-    // Player status
+    // `Player.kt` status
     printPlayerStatus(auraColor, isBlessed, player.name, healthStatus)
 }
 
