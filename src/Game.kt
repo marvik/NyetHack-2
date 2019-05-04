@@ -2,10 +2,12 @@ import kotlin.math.min
 import kotlin.math.max
 
 fun main(args: Array<String>) {
-    val name = "Madrigal"
     val healthPoints = 89
     val isBlessed = true
     val isImmortal = false
+
+    val player = Player()
+    player.castFireball()
 
     // Aura
     val auraColor = auraColor(isBlessed, healthPoints, isImmortal)
@@ -13,16 +15,7 @@ fun main(args: Array<String>) {
     val healthStatus = formatHealthStatus(healthPoints, isBlessed)
 
     // Player status
-    printPlayerStatus(auraColor, isBlessed, name, healthStatus)
-
-    val inebriation = castFireball()
-    when(inebriation) {
-        in 1..10 -> println("tipsy")
-        in 11..20 -> println("sloshed")
-        in 21..30 -> println("soused")
-        in 31..40 -> println("stewed")
-        in 41..50 -> println("..t0aSt3d")
-    }
+    printPlayerStatus(auraColor, isBlessed, player.name, healthStatus)
 }
 
 private fun printPlayerStatus(
@@ -50,8 +43,3 @@ private fun formatHealthStatus(healthPoints: Int, isBlessed: Boolean): String =
         in 15..74 -> "looks pretty hurt."
         else -> "is in awful condition!"
     }
-
-private fun castFireball(numFireballs: Int = 2): Int {
-    println("A glass of Fireball springs into existence. (x$numFireballs)")
-    return max(min(numFireballs, 50), 1)
-}
