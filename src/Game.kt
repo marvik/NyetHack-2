@@ -11,7 +11,7 @@ fun main(args: Array<String>) {
 
     val healthStatus = formatHealthStatus(healthPoints, isBlessed)
 
-    // `Player.kt` status
+    // Player status
     printPlayerStatus(auraColor, isBlessed, player.name, healthStatus)
 }
 
