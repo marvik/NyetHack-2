@@ -1,8 +1,10 @@
+package com.bignerdranch.nyethack
+
 fun main(args: Array<String>) {
     val player = Player()
     player.castFireball()
 
-    // Player status
+    // com.bignerdranch.nyethack.Player status
     printPlayerStatus(player)
 }
 
