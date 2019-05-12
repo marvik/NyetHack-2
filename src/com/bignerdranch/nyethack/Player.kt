@@ -10,6 +10,12 @@ class Player(_name: String,
             field = value.trim()
         }
 
+    constructor(name: String) : this(
+        name,
+        healthPoints = 100,
+        isBlessed = true,
+        isImmortal = false)
+
 
     fun auraColor(): String =
         if (isBlessed && healthPoints > 50 || isImmortal) "GREEN" else "NONE"
