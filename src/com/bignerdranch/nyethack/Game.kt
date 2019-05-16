@@ -10,6 +10,8 @@ fun main(args: Array<String>) {
 
     // com.bignerdranch.nyethack.Player status
     printPlayerStatus(player)
+
+    Game.play()
 }
 
 private fun printPlayerStatus(player: Player) {
@@ -18,5 +20,13 @@ private fun printPlayerStatus(player: Player) {
 }
 
 object Game {
+    init {
+        println("Welcome, adventure.")
+    }
 
+    fun play() {
+        while (true) {
+            // Play NyetHack
+        }
+    }
 }
