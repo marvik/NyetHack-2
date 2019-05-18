@@ -36,4 +36,10 @@ object Game {
                 "(Bressed: ${if (player.isBlessed) "YES" else "NO"})")
         println("${player.name} ${player.formatHealthStatus()}")
     }
+
+    private class GameInput(arg: String?) {
+        private val input = arg ?: ""
+        val command = input.split(" ")
+        val argument = input.split(" ").getOrElse(1) { "" }
+    }
 }
